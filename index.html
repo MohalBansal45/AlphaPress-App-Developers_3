@@ -382,7 +382,16 @@
 
             <!-- Site Scripts -->
             <script src="assets/js/app.js"></script>
-            
+            <script>document.oncontextmenu = document.body.oncontextmenu = function() {return false;}</script>
+
+<script>
+      $(document).ready(function() {
+          $('body').bind('cut copy', function(e) {
+              e.preventDefault();
+            });
+        });
+    </script>
+        
     </body>
 
 </html>
